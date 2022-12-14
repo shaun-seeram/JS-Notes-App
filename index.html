@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Planner App</title>
+    <script src="./scripts.js" defer></script>
+    <script src="./indexScripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="titleContainer">
+            <h1>Planner App</h1>
+            <span class="headerDate">Date goes here</span>
+        </div>
+        <button id="addNote">+</button>
+    </header>
+
+    <main>
+        <div class="itemListsWrapper">
+            <section class="toDoContainer">
+                <div class="containerHead">
+                    <h2>To Do:</h2>
+                    <button id="completed">Hide Completed</button>
+                </div>
+                <ul class="toDoList"></ul>
+            </section>
+    
+            <section class="notesContainer">
+                <div class="containerHead">
+                    <h2>Notes:</h2>
+                </div>
+                <ul class="notesList"></ul>
+            </section>
+        </div>
+
+        <section class="viewerContainer">
+            <h2 class="viewerTitle">Select an item</h2>
+            <p class="created"></p>
+            <p class="viewerContents"></p>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
