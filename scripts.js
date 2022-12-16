@@ -1,4 +1,5 @@
 let items = [];
+let hideCompleted = false;
 
 if (localStorage.getItem("items")) {
     items = JSON.parse(localStorage.getItem("items"))
@@ -29,6 +30,7 @@ const renderItems = (obj, hideCompleted = false) => {
             check.checked = item.completed;
             check.addEventListener("change", () => {
                 item.completed = !item.completed;
+                renderItems(todos, hideCompleted);
                 localStorage.setItem("items", JSON.stringify(items));
             })
             li.appendChild(check);

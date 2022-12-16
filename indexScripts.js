@@ -1,8 +1,6 @@
 const addNote = document.querySelector("#addNote");
 const completed = document.querySelector("#completed");
 
-let hideCompleted = false
-
 completed.addEventListener("click", (e) => {
     e.preventDefault();
     renderItems(todos, !hideCompleted)
