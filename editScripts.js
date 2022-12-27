@@ -59,7 +59,7 @@ create.addEventListener("click", (e) => {
 remove.addEventListener("click", (e) => {
     e.preventDefault();
 
-    if (index) {
+    if (index !== -1) {
         items.splice(index, 1);
         localStorage.setItem("items", JSON.stringify(items));
         window.location.replace("/");

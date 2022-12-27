@@ -13,7 +13,9 @@ const renderItems = (obj, hideCompleted = false) => {
     const viewerDate = document.querySelector(".created");
     const viewerContents = document.querySelector(".viewerContents");
 
-    obj[0].type === "note" ? noteList.innerHTML = "" : todoList.innerHTML = ""
+    if (obj.length > 0) {
+        obj[0].type === "note" ? noteList.innerHTML = "" : todoList.innerHTML = ""
+    }
 
     if (hideCompleted) {
         obj = obj.filter((item) => {
